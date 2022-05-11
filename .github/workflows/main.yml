@@ -45,7 +45,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/<username>/simplewhale:latest
+          tags: ghcr.io/${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:latest
       -
         name: Build and push Dockerhub
         uses: docker/build-push-action@v2
